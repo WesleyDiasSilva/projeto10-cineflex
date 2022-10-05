@@ -8,18 +8,18 @@ function HomePage() {
     <ContainerHome>
         <Title text='Selecione o seu filme'/>
         <ContainerMovies>
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
-          <MoviePoster />
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
+          <MoviePoster size='1'/>
       </ContainerMovies>
     </ContainerHome>
   )
@@ -34,8 +34,7 @@ const ContainerHome = styled.div`
 `
 
 const ContainerMovies = styled.div`
-  width: 304px;
-  margin: 0 auto;
+  width: 334px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
