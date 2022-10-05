@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Navbar() {
   return (
     <Header>
-      <Titulo>CINEFLEX</Titulo>
+        <Titulo>CINEFLEX</Titulo>
     </Header>
   )
 }
@@ -25,4 +25,5 @@ const Titulo = styled.h1`
   color: #E8833A;
   font-weight: 500;
   font-size: 36px;
+  text-decoration: none;
 `

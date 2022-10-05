@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import MoviePoster from '../Components/MoviePoster'
+import Title from '../Components/Title'
 
 function HomePage() {
   return (
     <ContainerHome>
-        <ContainerText>
-          <Text>Selecione o seu filme</Text>
-        </ContainerText>
+        <Title text='Selecione o seu filme'/>
         <ContainerMovies>
           <MoviePoster />
           <MoviePoster />
@@ -42,15 +41,3 @@ const ContainerMovies = styled.div`
   justify-content: space-around;
 `
 
-const Text = styled.span`
-  font-size: 20px;
-  font-family: Roboto;
-`
-
-const ContainerText = styled.div`
-  width: 100%;
-  height: 83px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`

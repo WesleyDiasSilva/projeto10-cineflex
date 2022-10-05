@@ -1,9 +1,13 @@
 import React from 'react'
+import DateSession from '../Components/DateSession'
+import Title from '../Components/Title'
 
 function SessionsPage() {
   return (
     <div>
-       <h1>Página para escolher sessão</h1>
+       <Title text='Selecione o horário'/>
+       <DateSession />
+       <DateSession />
     </div>
   )
 }
