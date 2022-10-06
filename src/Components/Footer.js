@@ -2,12 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import MoviePoster from './MoviePoster'
 
-function Footer() {
+function Footer(props) {
   return (
     <ContainerFooter>
       <ContainerContent>
         <MoviePoster size={0.35}></MoviePoster>
-        <Text>Zack Snyder Justice League</Text>
+        <div>
+          <MovieName>{props.MovieName}</MovieName>
+          <Session>{props.session}</Session>
+        </div>
       </ContainerContent>
     </ContainerFooter>
   )
@@ -34,6 +37,11 @@ const ContainerContent = styled.div`
   width: 300px;
 `
 
-const Text = styled.h1`
+const MovieName = styled.h1`
   margin-left: 20px;
+`
+
+const Session = styled.h1`
+  margin-left: 20px;
+  margin-top: 10px;
 `

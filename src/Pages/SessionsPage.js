@@ -10,7 +10,7 @@ function SessionsPage() {
        <Title text='Selecione o horário'/>
        <DateSession />
        <DateSession />
-       <Footer />
+       <Footer MovieName={'Zack Snyder Justice League'}/>
     </ContainerSessionPage>
   )
 }
