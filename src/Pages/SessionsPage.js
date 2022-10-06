@@ -5,6 +5,9 @@ import Footer from '../Components/Footer'
 import styled from 'styled-components'
 
 function SessionsPage() {
+
+  let [sessionAvaible, setSessionAvaible] = React.useState(true)
+
   return (
     <ContainerSessionPage>
        <Title text='Selecione o horário'/>

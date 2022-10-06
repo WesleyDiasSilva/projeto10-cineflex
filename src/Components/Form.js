@@ -4,6 +4,10 @@ import Button from '../Components/Button'
 import { Link } from 'react-router-dom'
 
 function Form() {
+
+  let [nomeComprador, setNomeComprador] = React.useState('')
+  let [cpfComprador, setCpfComprador] = React.useState('')
+
   return (
     <ContainerForm>
       <BoxInput>

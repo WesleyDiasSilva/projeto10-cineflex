@@ -1,9 +1,19 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import MoviePoster from '../Components/MoviePoster'
 import Title from '../Components/Title'
 
 function HomePage() {
+
+  useEffect(() => {
+    axios.get('https://mock-api.driven.com.br/api/ve8/cineflex/movies').then((res) => {
+      console.log(res.data)
+    }).catch((error) => {
+      console.log(error.response)
+    })
+  }, [])
+
   return (
     <ContainerHome>
         <Title text='Selecione o seu filme'/>
