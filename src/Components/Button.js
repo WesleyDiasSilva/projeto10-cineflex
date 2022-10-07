@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function Button(props) {
 
   return (
-    <ButtonStyle width={props.width}>
+    <ButtonStyle onClick={props.onClick} color={props.color} width={props.width}>
       {props.text}
     </ButtonStyle>
   )
@@ -16,7 +16,7 @@ const ButtonStyle = styled.button`
   width: ${props => props.width}px;
   height: 43px;
   border-radius: 5px;
-  background-color: #E8833A;
+  background-color: ${props => props.color ? props.color : '#E8833A'} ;
   color: white;
   font-family: Roboto;
   font-size: 18px;

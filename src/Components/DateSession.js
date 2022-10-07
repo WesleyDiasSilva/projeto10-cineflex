@@ -3,16 +3,17 @@ import styled from 'styled-components'
 import Button from './Button'
 import { Link } from 'react-router-dom'
 
-function DateSession() {
+function DateSession({weekday, date, showtimes, setOrder}) {
+
   return (
     <div>
-      <DaySession>Quinta-feira - 24/10/2021</DaySession>
+      <DaySession>{weekday} - {date}</DaySession>
       <ContainerButtons>
-        <Link to='/assentos/:idSession'>
-          <Button width='83' text='15:30'/>
+        <Link to={`/assentos/${showtimes[0].id}`}>
+          <Button  width='83' text={showtimes[0].name}/>
         </Link>
-        <Link to='/assentos/:idSession'>
-          <Button width='83' text='19:00'/>
+        <Link to={`/assentos/${showtimes[1].id}`}>
+          <Button width='83' text={showtimes[1].name}/>
         </Link>
       </ContainerButtons>
     </div>

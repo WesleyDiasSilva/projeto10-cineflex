@@ -6,9 +6,11 @@ import Title from '../Components/Title'
 
 function HomePage() {
 
+  let [movies, setMovies] = React.useState([])
+
   useEffect(() => {
-    axios.get('https://mock-api.driven.com.br/api/ve8/cineflex/movies').then((res) => {
-      console.log(res.data)
+    axios.get('https://mock-api.driven.com.br/api/v5/cineflex/movies').then((res) => {
+      setMovies(res.data)
     }).catch((error) => {
       console.log(error.response)
     })
@@ -18,18 +20,8 @@ function HomePage() {
     <ContainerHome>
         <Title text='Selecione o seu filme'/>
         <ContainerMovies>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
-          <MoviePoster size='1'/>
+          {movies.map((movie) => <MoviePoster key={movie.id} image={movie.posterURL} id={movie.id} size='1'/>)}
+          
       </ContainerMovies>
     </ContainerHome>
   )

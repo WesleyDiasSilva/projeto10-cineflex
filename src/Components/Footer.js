@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import MoviePoster from './MoviePoster'
 
 function Footer(props) {
+
+
   return (
     <ContainerFooter>
       <ContainerContent>
-        <MoviePoster size={0.35}></MoviePoster>
+        <MoviePoster idImage={props.idImage} image={props.image} size={0.35}></MoviePoster>
         <div>
           <MovieName>{props.MovieName}</MovieName>
           <Session>{props.session}</Session>
@@ -23,7 +25,7 @@ const ContainerFooter = styled.div`
   width: 100%;
   height: 117px;
   position: absolute;
-  bottom:0px;
+  bottom:-200px;
   z-index: 1;
 `
 
